@@ -1,0 +1,39 @@
+>npx (permite instalar paquetes externos) create-react-app wheather-app
+
+>yarn start - Ejecuta servidor local 
+
+prop-types: Nos ayuda a verificar las propiedades que le pasamos como parametros a los distintos componentes.
+  con propTypes creamos una funcion donde llamamos las propiedades de la constante y le asignamos un valor (string, number)
+   y opcionalmente podemos tambien poner (Required) y algunos parametros mas que manejan los elementos en html5
+
+prop-types.shape : ayuda a definir el tipo de dato a un parametro de una constante
+
+
+*************TIPOS DE componentes
+class component (componente tipo clase): Es una clase que extiende de "component" despues "render()" es quien
+permite dibujar el componente
+
+function component (componente tipo funcion): se define como 'const name_function = () =>();'
+
+La funcionalidad es la misma pero con un clas component tenemos mas control del component ya que se puede manejar estados 
+de la aplicacion entre otras cosas;
+
+
+************************PROMISE **********************
+una promesa "pomise" es un objeto y se utiliza para peticiones asincronas
+y representa un valor que puede estar en el "presente" "ahora" o "nunca" debido a algun tipo de fallo,
+Una promesa tiene 3 estados 
+          Pendiente :Es el estado inicial de una promise y no esta ni pendiente ni cumplida
+          Cumplida  :Significa que la promise se cumplio satisfactoriamente
+          Rechazada :Significa que la funcion fallo
+
+
+          **************PATRON DE DISEÑO SOLID *************
+
+    S : single responsability
+    O
+    L
+    I
+    D
+
+    //eventos del ciclo de vida del componente de react
