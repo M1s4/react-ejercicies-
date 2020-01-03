@@ -1,6 +1,11 @@
 import convert from 'convert-units';
 import {
     SUN,   
+    CLOUD,
+    RAIN,
+    SNOW,
+    THUNDER,
+    DRIZZLE,
  
  } from './../constants/weathers';
 
@@ -11,9 +16,21 @@ import {
     return Number(convert(kelvin).from("K").to("C").toFixed(2));
   }
  //creamos una funcion que recibe un solo parametro, el cual retorna el valor del "weatherState"
- const getWeatherState = weather_data =>{ 
-    return SUN;
-         
+ const getWeatherState = weather =>{ 
+    const {id} = weather;
+    if(id <300){
+       return THUNDER;
+    }else if (id <400){
+      return DRIZZLE;      
+   }else if (id <500){
+      return RAIN;
+   }else if (id < 700){
+      return SNOW;
+   } else if (id ===800){
+      return SUN;
+   } else {
+      return CLOUD;
+   }       
   }
 //en esta funcion recibe un solo parametro "weather_data" y recibe loos datos del servidorgetData
  const transformWeather = weather_data=>{
@@ -24,7 +41,7 @@ import {
         const {humidity} = weather_data.main;
 
         const {speed} = weather_data.wind;
-        const weatherState = getWeatherState(weather_data);
+        const weatherState = getWeatherState(weather_data.weather[0]);
         const temperature = getTemp(temp);
      //creamos una  nueva estructura(constante) con los valores de las constantes 
         const data = {

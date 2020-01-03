@@ -42,7 +42,7 @@ agregamos props para poder recibir datos a weatherLocation (por medio de index)
      console.log ("componentDidMount");
     
      this.handleUpdateClick();
-     console.log("aqui ya se imprimio el objeto");
+     console.log("aqui se imprimie el objeto");
   }
   
   componentDidUpdate(prevProps, prevState) {
@@ -68,6 +68,7 @@ agregamos props para poder recibir datos a weatherLocation (por medio de index)
     
     });
     }
+    
   render (){
     const {city,data} = this.state;
     return ( 

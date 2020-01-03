@@ -3,24 +3,24 @@ import WeatherIcons from 'react-weathericons';
 import PropTypes from 'prop-types';
 import {
   CLOUD,
-  CLOUDY,
-   SUN,
-    RAIN,
-     SNOW,
-     WINDY,
-
+  SUN,
+  RAIN,
+  SNOW,
+  THUNDER,
+  DRIZZLE,
 } from './../../../constants/weathers';
 import './styles.css';
 
 /* se crea constante para recibir los valores de las temperaturas y mandarlas a la funcion weathericon */
 const icons ={
  [CLOUD]:"cloud",
- [CLOUDY]:"cloudy",
   [SUN]:"day-sunny",
   [RAIN]:"rain",
   [SNOW]:"snow",
-  [WINDY]:"windy",
-};
+  [THUNDER]:"day-thunderstore",
+  [DRIZZLE]:"day-showers",
+
+};  
 
 /*creamos una constante con una funcion flecha que maneja el control del icono a mostrar segun la temperatura */
 const getWeatherIcon = weatherState =>{
